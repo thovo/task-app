@@ -1,0 +1,13 @@
+@import "src/shared/styles/variables";
+
+.create-task {
+  display: flex;
+
+  button {
+    background: $aurora-green;
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+}

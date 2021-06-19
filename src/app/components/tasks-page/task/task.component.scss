@@ -1,0 +1,26 @@
+@import "src/shared/styles/variables";
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__actions {
+    display: flex;
+    button {
+      margin: 0 5px;
+
+      &.edit {
+        background: $blue;
+      }
+      &.delete {
+        background: $tomato-red;
+      }
+      &.save {
+        background: $aurora-green;
+      }
+      &.cancel {
+        background: $mat-purple;
+      }
+    }
+  }
+}

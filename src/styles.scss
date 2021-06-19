@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+@import "shared/styles/variables";
+
+html, body {
+  font-family: 'Poppins', sans-serif;
+}
+
+button {
+  border: none;
+  color: $white;
+  padding: 5px 15px;
+  max-height: 30px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+}
+
+input {
+  padding: 5px;
+  outline: none;
+  margin: 0 10px;
+  border-radius: 0;
+  border-color: $blue;
+  border-style: solid;
+  transition: all 0.5s ease-in-out;
+  min-width: 250px;
+  &:focus {
+    border-radius: 0;
+    border-color: $aurora-green;
+    border-style: double;
+  }
+}

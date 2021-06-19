@@ -1,0 +1,12 @@
+<div class="create-task">
+  <label for="task-name">Task name:</label>
+  <input
+    id="task-name"
+    type="text"
+    [(ngModel)]="taskName"
+    name="task-name"
+  />
+  <button class="create" [disabled]="taskName.length === 0" (click)="createTask()">
+    Create
+  </button>
+</div>

@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Tasks</h1>
+  <app-request-status></app-request-status>
+  <app-create-task></app-create-task>
+  <div class="tasks" *ngIf="tasks$ | async as tasks">
+    <app-task *ngFor="let task of tasks" [task]="task"></app-task>
+  </div>
+  <div class="no-task" *ngIf="(tasks$ | async)?.length === 0">
+    No task to display, please add new task!
+  </div>
+</div>

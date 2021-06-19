@@ -1,0 +1,14 @@
+<div class="task" *ngIf="task">
+  <h2 class="task__name" *ngIf="!isEditActive">{{ task.name }}</h2>
+  <input type="text" class="task__edit" *ngIf="isEditActive" [(ngModel)]="taskName">
+  <div class="task__actions">
+    <ng-container *ngIf="!isEditActive">
+      <button class="edit" (click)="editTask()">Edit</button>
+      <button class="delete" (click)="deleteTask(task.id)">Delete</button>
+    </ng-container>
+    <ng-container *ngIf="isEditActive">
+      <button class="save" (click)="saveTask()">Save</button>
+      <button class="cancel" (click)="cancel()">Cancel</button>
+    </ng-container>
+  </div>
+</div>
